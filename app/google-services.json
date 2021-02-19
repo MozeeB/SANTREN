@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "914157595541",
+    "project_id": "santren-e122d",
+    "storage_bucket": "santren-e122d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914157595541:android:eef936ca45fa18c5e9649c",
+        "android_client_info": {
+          "package_name": "com.cikup.santren"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914157595541-6kfes8q3i69fvt2ejijp39b8jmh4thc1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cikup.santren",
+            "certificate_hash": "bc8a8c268c9b032926a96224f5293d5c174d15c1"
+          }
+        },
+        {
+          "client_id": "914157595541-24ft7851hmfok051oig3gqtclps7er9r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZ-zVjPeKMb219SJm8RpkYo2YbXZowY7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914157595541-24ft7851hmfok051oig3gqtclps7er9r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
