@@ -22,4 +22,8 @@
     <string name="lihat_semua">Lihat semua</string>
     <string name="santren">SANTREN</string>
     <string name="raih_info_bersama_santren">Raih Info Bersama SANTREN</string>
+    <string name="logout">Logout</string>
+    <string name="jadwal">Jadwal</string>
+    <string name="acara_santri">Acara Santri</string>
+    <string name="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus eget dui turpis massa. Dictum rhoncus velit arcu in lorem elementum. Ut turpis cras elementum odio in amet a, diam. Vel diam viverra nullam blandit. Diam nam dictum dignissim ullamcorper sed etiam. Egestas libero id massa nunc, consectetur eget. Lacus tempor, consequat, placerat lectus risus. Massa at nam sit et nibh. Est scelerisque felis, tortor egestas quisque. Vivamus vel nisi augue.</string>
 </resources>

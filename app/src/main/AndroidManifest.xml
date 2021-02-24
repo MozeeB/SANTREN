@@ -4,11 +4,13 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Santren">
+        <activity android:name=".presentation.ui.information.DetailInfoActivity" />
+        <activity android:name=".presentation.ui.event.EventActivity" />
+        <activity android:name=".presentation.ui.information.InformationActivity" />
         <activity android:name=".presentation.ui.splash.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

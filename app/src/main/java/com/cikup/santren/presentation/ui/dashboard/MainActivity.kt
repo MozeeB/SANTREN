@@ -3,7 +3,9 @@ package com.cikup.santren.presentation.ui.dashboard
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cikup.santren.R
 import com.cikup.santren.adapter.InformationAdapter
@@ -12,18 +14,47 @@ import com.cikup.santren.data.model.InformationModel
 import com.cikup.santren.data.model.MenuModel
 import com.cikup.santren.helper.Field
 import com.cikup.santren.helper.QueryRead
+import com.cikup.santren.presentation.navigation.backToLogin
+import com.cikup.santren.presentation.navigation.navigateToInformation
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.toObjects
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        logoutBTN.setOnClickListener(this)
+        liharSemuaTV.setOnClickListener(this)
+
         initUser()
+
+    }
+
+    override fun onClick(p0: View?) {
+        when(p0?.id){
+            R.id.liharSemuaTV ->{
+                navigateToInformation(this)
+            }
+            R.id.logoutBTN ->{
+                val builder = AlertDialog.Builder(this)
+                builder.setTitle("Logout")
+                builder.setMessage("Apakah anda yakin ingin log out?")
+                builder.setPositiveButton("Ya") { dialog, which ->
+                    FirebaseAuth.getInstance().signOut()
+                    backToLogin(this)
+                }
+                builder.setNegativeButton("Tidak") { dialog, which ->
+                    dialog.dismiss()
+                }
+
+                val dialog: AlertDialog = builder.create()
+                dialog.show()
+            }
+        }
     }
 
     @SuppressLint("SetTextI18n")
@@ -80,5 +111,7 @@ class MainActivity : AppCompatActivity() {
 
             }
     }
+
+
 
 }

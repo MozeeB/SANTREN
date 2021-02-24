@@ -6,6 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.cikup.santren.R
 import com.cikup.santren.data.model.MenuModel
+import com.cikup.santren.helper.MenuID
+import com.cikup.santren.presentation.navigation.navigationToEvent
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_menu.view.*
 
@@ -22,6 +24,20 @@ class MenuAdapter(
 
         Picasso.get().load(data.image).into(view.logoMenuIV)
         view.titleMenuTV.text = data.name
+
+        view.setOnClickListener {
+            when(data.id){
+                MenuID.jadwal_acara_santri ->{
+                    navigationToEvent(it.context)
+                }
+                MenuID.kritik_dan_saran ->{
+
+                }
+                MenuID.laporan_absensi_santri ->{
+
+                }
+            }
+        }
     }
 
     override fun getItemCount(): Int = menuModel.size
