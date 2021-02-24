@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Santren">
-        <activity android:name=".presentation.ui.register.RegisterActivity"></activity>
-        <activity android:name=".presentation.ui.login.LoginActivity" />
-        <activity android:name=".presentation.ui.dashboard.MainActivity">
+        <activity android:name=".presentation.ui.splash.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".presentation.ui.register.RegisterActivity" />
+        <activity android:name=".presentation.ui.login.LoginActivity" />
+        <activity android:name=".presentation.ui.dashboard.MainActivity" />
     </application>
 
 </manifest>

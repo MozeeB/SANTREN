@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Santren</string>
+    <string name="login">Login</string>
+    <string name="selamat">Selamat</string>
+    <string name="datang">Datang</string>
+    <string name="mohon_untuk_mengisi_informasi_dibawah_ini">Mohon untuk mengisi Informasi dibawah ini</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="jika_tidak_memiliki_akun">Jika tidak memiliki akun,</string>
+    <string name="klik_disini">klik disini</string>
+    <string name="tidak">Tidak</string>
+    <string name="punya_akun">Punya Akun ?</string>
+    <string name="nama">Nama</string>
+    <string name="register">Register</string>
+    <string name="nomor_hp">Nomor HP</string>
+    <string name="jika_sudah_memiliki_akun">Jika sudah memiliki akun,</string>
+    <string name="loading">Loading...</string>
+    <string name="register_failed">Register gagal</string>
+    <string name="register_success">Register berhasil</string>
+    <string name="login_success">Login berhasil</string>
+    <string name="informasi">Informasi</string>
+    <string name="lihat_semua">Lihat semua</string>
+    <string name="santren">SANTREN</string>
+    <string name="raih_info_bersama_santren">Raih Info Bersama SANTREN</string>
 </resources>
