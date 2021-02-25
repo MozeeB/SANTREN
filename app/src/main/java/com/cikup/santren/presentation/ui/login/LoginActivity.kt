@@ -48,12 +48,10 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             Toast.makeText(this, "Mohon isi password", Toast.LENGTH_LONG).show()
             return
         }
-
         progressBarHolder.visibility = View.VISIBLE
         firebaseAuth.signInWithEmailAndPassword(email, password)
-            .addOnCompleteListener {
+            .addOnSuccessListener {
                 val currentUserId = FirebaseAuth.getInstance().currentUser!!.uid
-
                 QueryRead.users
                     .document(currentUserId)
                     .get()
