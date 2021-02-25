@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.cikup.santren.R.anim.*
+import com.cikup.santren.presentation.ui.absent.AbsentActivity
 import com.cikup.santren.presentation.ui.dashboard.MainActivity
 import com.cikup.santren.presentation.ui.event.EventActivity
 import com.cikup.santren.presentation.ui.information.DetailInfoActivity
@@ -12,6 +13,7 @@ import com.cikup.santren.presentation.ui.information.InformationActivity
 import com.cikup.santren.presentation.ui.login.LoginActivity
 
 import com.cikup.santren.presentation.ui.register.RegisterActivity
+import com.cikup.santren.presentation.ui.report.ReportActivity
 
 fun navigateToRegister(context: Context) {
     if (context != null && context is Activity) {
@@ -55,6 +57,21 @@ fun navigationToEvent(context: Context){
         val activity = context
         val flags = context.flags(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP)
         activity.start<EventActivity>(flags, right_in, left_out)
+    }
+}
+fun navigateToReport(context: Context){
+    if (context != null && context is Activity) {
+        val activity = context
+        val flags = context.flags(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        activity.start<ReportActivity>(flags, right_in, left_out)
+    }
+}
+
+fun navigateToAbsent(context: Context){
+    if (context != null && context is Activity) {
+        val activity = context
+        val flags = context.flags(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        activity.start<AbsentActivity>(flags, right_in, left_out)
     }
 }
 fun backToLogin(context: Context) {

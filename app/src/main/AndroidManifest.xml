@@ -8,6 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Santren">
+        <activity android:name=".presentation.ui.absent.AbsentActivity"></activity>
+        <activity android:name=".presentation.ui.report.ReportActivity" />
         <activity android:name=".presentation.ui.information.DetailInfoActivity" />
         <activity android:name=".presentation.ui.event.EventActivity" />
         <activity android:name=".presentation.ui.information.InformationActivity" />

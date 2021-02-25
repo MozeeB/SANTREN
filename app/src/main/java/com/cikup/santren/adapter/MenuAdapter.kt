@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.cikup.santren.R
 import com.cikup.santren.data.model.MenuModel
 import com.cikup.santren.helper.MenuID
+import com.cikup.santren.presentation.navigation.navigateToAbsent
+import com.cikup.santren.presentation.navigation.navigateToReport
 import com.cikup.santren.presentation.navigation.navigationToEvent
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_menu.view.*
@@ -31,10 +33,10 @@ class MenuAdapter(
                     navigationToEvent(it.context)
                 }
                 MenuID.kritik_dan_saran ->{
-
+                    navigateToReport(it.context)
                 }
                 MenuID.laporan_absensi_santri ->{
-
+                    navigateToAbsent(it.context)
                 }
             }
         }

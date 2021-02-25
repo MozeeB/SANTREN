@@ -8,6 +8,9 @@ object Collection{
     val menu = "menu"
     val information = "information"
     val event = "event"
+    val reports = "reports"
+    val kelas = "class"
+    val major = "major"
 }
 
 object QueryRead{
@@ -15,6 +18,10 @@ object QueryRead{
     val menu = FirebaseFirestore.getInstance().collection(Collection.menu)
     val information = FirebaseFirestore.getInstance().collection(Collection.information)
     val event = FirebaseFirestore.getInstance().collection(Collection.event)
+    val kelas = FirebaseFirestore.getInstance().collection(Collection.kelas)
+}
+object QueryAdd{
+    val reports = FirebaseFirestore.getInstance().collection(Collection.reports)
 }
 object Field{
 
@@ -32,6 +39,11 @@ object Field{
     val date = "date"
     val image = "image"
     val title = "title"
+
+    //reports
+
+    val report = "report"
+    val send_by = "send_by"
 }
 
 object Role{
