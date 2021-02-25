@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <layer-list>
@@ -8,7 +8,7 @@
                         android:width="1dip"
                         android:color="#D8D8D8" />
                     <corners android:radius="3dp" />
-                    <solid android:color="@android:color/transparent" />
+                    <solid android:color="@color/color4" />
                     <padding
                         android:bottom="5.0dip"
                         android:left="5.0dip"
