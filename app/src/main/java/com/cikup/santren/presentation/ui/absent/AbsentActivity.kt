@@ -13,6 +13,7 @@ import com.cikup.santren.data.model.ClassModel
 import com.cikup.santren.data.model.MajorModel
 import com.cikup.santren.helper.Collection
 import com.cikup.santren.helper.QueryRead
+import com.cikup.santren.presentation.navigation.backToDashboard
 import com.google.firebase.firestore.ktx.toObjects
 import kotlinx.android.synthetic.main.activity_absent.*
 
@@ -91,5 +92,11 @@ class AbsentActivity : AppCompatActivity() {
                 Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
 
             }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+
+        backToDashboard(this)
     }
 }
