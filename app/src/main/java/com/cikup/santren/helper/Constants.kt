@@ -11,6 +11,8 @@ object Collection{
     val reports = "reports"
     val kelas = "class"
     val major = "major"
+    val absent = "absent"
+    val class_absent = "class_absent"
 }
 
 object QueryRead{
@@ -19,6 +21,7 @@ object QueryRead{
     val information = FirebaseFirestore.getInstance().collection(Collection.information)
     val event = FirebaseFirestore.getInstance().collection(Collection.event)
     val kelas = FirebaseFirestore.getInstance().collection(Collection.kelas)
+    val absent = FirebaseFirestore.getInstance().collection(Collection.absent)
 }
 object QueryAdd{
     val reports = FirebaseFirestore.getInstance().collection(Collection.reports)
@@ -40,6 +43,8 @@ object Field{
     val image = "image"
     val title = "title"
 
+    val description = "description"
+
     //reports
 
     val report = "report"
@@ -53,6 +58,9 @@ object Role{
 
 object Extras{
     val ID_INFO = "id_info"
+    val ID_MAJOR = "id_major"
+    val ID_CLASS_ABSENT = "id_class_absent"
+    val ABSENT_CLASS = "absent_class"
 }
 object MenuID{
     val laporan_absensi_santri = "FbE3hzKurZsrUrtCz1vo"

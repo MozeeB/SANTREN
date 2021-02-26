@@ -32,4 +32,5 @@
     <string name="kirim">Kirim</string>
     <string name="laporan">Laporan</string>
     <string name="absensi_santri">Absensi Santri</string>
+    <string name="absensi">Absensi</string>
 </resources>

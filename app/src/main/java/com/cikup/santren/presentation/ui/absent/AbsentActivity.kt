@@ -84,7 +84,7 @@ class AbsentActivity : AppCompatActivity() {
 
                     majorRV.apply {
                         layoutManager = LinearLayoutManager(this@AbsentActivity, LinearLayoutManager.VERTICAL, false)
-                        adapter = MajorAdapter(data)
+                        adapter = MajorAdapter(this@AbsentActivity, data)
                     }
                 }
             }

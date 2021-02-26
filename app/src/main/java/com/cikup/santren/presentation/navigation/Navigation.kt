@@ -6,6 +6,8 @@ import android.content.Intent
 import android.os.Bundle
 import com.cikup.santren.R.anim.*
 import com.cikup.santren.presentation.ui.absent.AbsentActivity
+import com.cikup.santren.presentation.ui.absent.ClassActivity
+import com.cikup.santren.presentation.ui.absent.DetailAbsentActivity
 import com.cikup.santren.presentation.ui.dashboard.MainActivity
 import com.cikup.santren.presentation.ui.event.EventActivity
 import com.cikup.santren.presentation.ui.information.DetailInfoActivity
@@ -74,6 +76,22 @@ fun navigateToAbsent(context: Context){
         activity.start<AbsentActivity>(flags, right_in, left_out)
     }
 }
+fun navigateToClass(context: Context, bundle: Bundle){
+    if (context != null && context is Activity) {
+        val activity = context
+        val flags = context.flags(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        activity.start<ClassActivity>(bundle, flags, right_in, left_out)
+    }
+}
+
+fun navigateToDetailAbsent(context: Context, bundle: Bundle){
+    if (context != null && context is Activity) {
+        val activity = context
+        val flags = context.flags(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        activity.start<DetailAbsentActivity>(bundle, flags, right_in, left_out)
+    }
+}
+
 fun backToLogin(context: Context) {
     if (context != null && context is Activity) {
         val activity = context
@@ -94,5 +112,19 @@ fun backToInformation(context: Context){
         val activity = context
         val flags = context.flags(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP)
         activity.start<InformationActivity>(flags, left_in, right_out)
+    }
+}
+fun backToClass(context: Context, bundle: Bundle){
+    if (context != null && context is Activity) {
+        val activity = context
+        val flags = context.flags(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        activity.start<ClassActivity>(bundle, flags, left_in, right_out)
+    }
+}
+fun backToAbsent(context: Context){
+    if (context != null && context is Activity) {
+        val activity = context
+        val flags = context.flags(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        activity.start<AbsentActivity>(flags, left_in, right_out)
     }
 }
