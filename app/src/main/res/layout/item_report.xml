@@ -9,7 +9,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_80sdp"
+        android:layout_height="wrap_content"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,27 +36,31 @@
                 android:id="@+id/sendByNameTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Oleh : Wali Santri"
-                android:textSize="@dimen/_12ssp"
-                android:textStyle="bold"
-                android:textColor="@color/color1"
                 android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/reportContentTV"
                 app:layout_constraintTop_toBottomOf="@+id/reportContentTV"
-                android:layout_marginLeft="@dimen/_10sdp" />
+                tools:text="Oleh : Wali Santri" />
 
             <TextView
                 android:id="@+id/dateTimeTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textSize="@dimen/_12ssp"
-                android:textColor="@color/color1"
-                android:textStyle="bold"
                 android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/reportContentTV"
-                tools:text="20 Maret 2021"
-                android:layout_marginRight="@dimen/_10sdp" />
+                tools:text="20 Maret 2021" />
 
 
 
