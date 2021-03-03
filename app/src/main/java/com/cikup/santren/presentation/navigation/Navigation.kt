@@ -16,6 +16,7 @@ import com.cikup.santren.presentation.ui.login.LoginActivity
 
 import com.cikup.santren.presentation.ui.register.RegisterActivity
 import com.cikup.santren.presentation.ui.report.ReportActivity
+import com.cikup.santren.presentation.ui.report.ReportTeacherActivity
 
 fun navigateToRegister(context: Context) {
     if (context != null && context is Activity) {
@@ -89,6 +90,14 @@ fun navigateToDetailAbsent(context: Context, bundle: Bundle){
         val activity = context
         val flags = context.flags(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP)
         activity.start<DetailAbsentActivity>(bundle, flags, right_in, left_out)
+    }
+}
+
+fun navigateToReportTeacher(context: Context){
+    if (context != null && context is Activity) {
+        val activity = context
+        val flags = context.flags(Intent.FLAG_ACTIVITY_NEW_TASK, Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        activity.start<ReportTeacherActivity>( flags, right_in, left_out)
     }
 }
 

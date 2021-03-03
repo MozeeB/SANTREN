@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/reportContentTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Untuk IDN, agar saung di IDN dijadikan lebih bagus dan tidak.... " />
+
+            <TextView
+                android:id="@+id/sendByNameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Oleh : Wali Santri"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                android:textColor="@color/color1"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@+id/reportContentTV"
+                app:layout_constraintTop_toBottomOf="@+id/reportContentTV"
+                android:layout_marginLeft="@dimen/_10sdp" />
+
+            <TextView
+                android:id="@+id/dateTimeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/color1"
+                android:textStyle="bold"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@+id/reportContentTV"
+                tools:text="20 Maret 2021"
+                android:layout_marginRight="@dimen/_10sdp" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -13,6 +13,7 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_information.view.*
 
 class InformationAdapter(
+    private val fromDetail:String,
     private val informationModel: ArrayList<InformationModel>
 ) : RecyclerView.Adapter<InformationAdapter.ViewHolder>() {
 
@@ -20,9 +21,16 @@ class InformationAdapter(
         parent: ViewGroup,
         viewType: Int
     ): ViewHolder {
-        return ViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.item_information, parent, false)
-        )
+        return if (fromDetail == "detail"){
+            ViewHolder(
+                LayoutInflater.from(parent.context).inflate(R.layout.item_info_detail, parent, false)
+            )
+        }else{
+            ViewHolder(
+                LayoutInflater.from(parent.context).inflate(R.layout.item_information, parent, false)
+            )
+        }
+
 
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

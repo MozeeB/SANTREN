@@ -25,6 +25,8 @@ import kotlinx.android.synthetic.main.custom_fab_menu.*
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 
+    private var roles = ""
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -69,6 +71,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 if (it.result != null){
                     val data = it.result!!
                     nameUserDashboardTV.text = "Halo ${data[Field.name]}"
+                    roles = data[Field.role].toString()
                     when(data[Field.role]){
                         Role.guru ->{
                             speedDial.visibility = View.VISIBLE
@@ -117,7 +120,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
                     menuDashboardRV.layoutManager =
                         LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-                    menuDashboardRV.adapter = MenuAdapter(data)
+                    menuDashboardRV.adapter = MenuAdapter(roles, data)
 
                     initInformation()
                 }
@@ -134,7 +137,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 if (it.result != null){
                     val data = it.result?.toObjects<InformationModel>() as ArrayList
                     informasiDashboardRV.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-                    informasiDashboardRV.adapter = InformationAdapter(data)
+                    informasiDashboardRV.adapter = InformationAdapter("main",data)
                 }
             }
             .addOnFailureListener {

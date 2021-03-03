@@ -22,6 +22,7 @@ object QueryRead{
     val event = FirebaseFirestore.getInstance().collection(Collection.event)
     val kelas = FirebaseFirestore.getInstance().collection(Collection.kelas)
     val absent = FirebaseFirestore.getInstance().collection(Collection.absent)
+    val reports = FirebaseFirestore.getInstance().collection(Collection.reports)
 }
 object QueryAdd{
     val reports = FirebaseFirestore.getInstance().collection(Collection.reports)

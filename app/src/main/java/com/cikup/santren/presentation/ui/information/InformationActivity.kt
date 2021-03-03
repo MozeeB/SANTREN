@@ -27,7 +27,7 @@ class InformationActivity : AppCompatActivity() {
                     if (it.result != null){
                         val data = it.result?.toObjects<InformationModel>() as ArrayList
                         informationDetailRV.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-                        informationDetailRV.adapter = InformationAdapter(data)
+                        informationDetailRV.adapter = InformationAdapter("detail", data)
                     }
                 }
                 .addOnFailureListener {
