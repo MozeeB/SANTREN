@@ -66,7 +66,8 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                                 }
                                 Role.guru ->{
                                     progressBarHolder.visibility = View.GONE
-                                }
+                                    navigateToDashboard(this)
+                                    Toast.makeText(this, getString(R.string.login_success), Toast.LENGTH_LONG).show()                                }
                             }
                         }
                     }

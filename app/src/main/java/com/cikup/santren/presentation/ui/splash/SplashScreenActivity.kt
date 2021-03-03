@@ -39,6 +39,7 @@ class SplashScreenActivity : AppCompatActivity() {
                                     navigateToDashboard(this@SplashScreenActivity)
                                 }
                                 Role.guru -> {
+                                    navigateToDashboard(this@SplashScreenActivity)
                                 }
                             }
                         }

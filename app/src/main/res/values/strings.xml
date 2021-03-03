@@ -33,4 +33,6 @@
     <string name="laporan">Laporan</string>
     <string name="absensi_santri">Absensi Santri</string>
     <string name="absensi">Absensi</string>
+    <string name="laporan_absensi_santri">Laporan Absensi Santri</string>
+    <string name="jadwal_acara_santri">Jadwal Acara Santri</string>
 </resources>

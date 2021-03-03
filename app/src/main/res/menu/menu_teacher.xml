@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fabLaporanAbnsensiSantri"
+        android:title="@string/laporan_absensi_santri"
+        android:icon="@drawable/absensi_floating"/>
+    <item
+        android:id="@+id/fabJadwalAcaraSantri"
+        android:title="@string/jadwal_acara_santri"
+        android:icon="@drawable/calender_floating"/>
+
+    <item
+        android:id="@+id/fabInformation"
+        android:title="@string/informasi"
+        android:icon="@drawable/info_floating"/>
+</menu>
