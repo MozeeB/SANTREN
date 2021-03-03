@@ -93,6 +93,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                                 false
                             }
                         }
+                        Role.walsan ->{
+                            speedDial.visibility = View.GONE
+
+                        }
                     }
                 }
                 initMenus()
