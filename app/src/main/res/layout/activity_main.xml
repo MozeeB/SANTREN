@@ -122,6 +122,6 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-<!--    <include layout="@layout/custom_fab_menu" />-->
+    <include layout="@layout/custom_fab_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,11 +14,13 @@ import com.cikup.santren.data.model.InformationModel
 import com.cikup.santren.data.model.MenuModel
 import com.cikup.santren.helper.Field
 import com.cikup.santren.helper.QueryRead
+import com.cikup.santren.helper.Role
 import com.cikup.santren.presentation.navigation.backToLogin
 import com.cikup.santren.presentation.navigation.navigateToInformation
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.toObjects
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.custom_fab_menu.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -67,6 +69,31 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 if (it.result != null){
                     val data = it.result!!
                     nameUserDashboardTV.text = "Halo ${data[Field.name]}"
+                    when(data[Field.role]){
+                        Role.guru ->{
+                            speedDial.visibility = View.VISIBLE
+                            speedDial.inflate(R.menu.menu_teacher)
+                            speedDial.setOnActionSelectedListener { action ->
+                                when (action?.id) {
+                                    R.id.fabLaporanAbnsensiSantri -> {
+                                        speedDial.close()
+                                        return@setOnActionSelectedListener true
+                                    }
+                                    R.id.fabJadwalAcaraSantri -> {
+                                        speedDial.close()
+                                        return@setOnActionSelectedListener true
+
+                                    }
+                                    R.id.fabInformation -> {
+                                        speedDial.close()
+                                        return@setOnActionSelectedListener true
+
+                                    }
+                                }
+                                false
+                            }
+                        }
+                    }
                 }
                 initMenus()
 
